@@ -1,12 +1,11 @@
-Hello
-World
-Bye
-Hello:World
-Hello:Bye
-World:Bye
-Hello
-Hadoop
-Goodbye
-Hello:Hadoop
-Hello:Goodbye
-Hadoop:Goodbye
+('Hello', 2)
+('World', 1)
+('Bye', 1)
+('Hello:World', 1)
+('Hello:Bye', 1)
+('World:Bye', 1)
+('Hadoop', 1)
+('Goodbye', 1)
+('Hello:Hadoop', 1)
+('Hello:Goodbye', 1)
+('Hadoop:Goodbye', 1)

@@ -17,8 +17,8 @@ def unique_pairs(line):
 
 
 conf= SparkConf().setMaster("local").setAppName("Test_App")
-sc= SparkContext(conf= conf)
+sc= SparkContext(conf=conf)
 
 lines_rdd = sc.textFile("file.txt")
-unique_pairs_rdd = lines_rdd.flatMap(unique_pairs)
+unique_pairs_rdd = lines_rdd.flatMap(unique_pairs).map(lambda word: (word, 1)).reduceByKey(lambda x, y: x+y)
 unique_pairs_rdd.saveAsTextFile("output")
