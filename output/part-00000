@@ -1,6 +1,12 @@
 Hello
 World
 Bye
+Hello:World
+Hello:Bye
+World:Bye
 Hello
 Hadoop
 Goodbye
+Hello:Hadoop
+Hello:Goodbye
+Hadoop:Goodbye

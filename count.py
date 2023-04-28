@@ -1,16 +1,19 @@
 from pyspark import SparkConf, SparkContext
 
-def unique_pairs(text):
-    lines = text.split("\n")
-    for line in lines:
-        disct_words = []
-        words = line.split(" ")
-        for word in words:
-          if word not in disct_words:
-             disct_words.append(word)
-    #for i in range(len(disct_words)):
-    #    for j in range(i+1,len(disct_words)):
-    return disct_words
+def unique_pairs(line):
+    # unique words
+    disct_words=[]
+    words = line.split()
+    for word in words:
+      if word not in disct_words:
+         disct_words.append(word)
+    # pairs of words
+    pairs=[]
+    for i in range(len(disct_words)):
+        for j in range(i+1,len(disct_words)):
+            pairs.append(disct_words[i]+":"+disct_words[j])
+    # make combined array
+    return disct_words+pairs
 
 
 conf= SparkConf().setMaster("local").setAppName("Test_App")
