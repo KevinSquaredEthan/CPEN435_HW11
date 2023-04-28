@@ -1,6 +1,7 @@
-# other files
+# other files and folders
 *.swp
 *.txt
+output
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

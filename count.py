@@ -1,6 +1,12 @@
 from pyspark import SparkConf, SparkContext
 
+with open('patterns.txt', 'r') as f:
+  patterns = f.read().strip()
+translator = str.maketrans('', '', patterns)
+
 def unique_pairs(line):
+    # remove punctuation and lower case part from ChatGPT
+    line = line.translate(translator).lower()
     # unique words
     disct_words=[]
     words = line.split()
